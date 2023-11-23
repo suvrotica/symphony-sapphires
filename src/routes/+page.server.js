@@ -112,7 +112,7 @@ export async function load() {
 			console.log('Table does not exist, creating and seeding it with dummy data now...');
 			// Table is not created yet
 			await seed();
-			const { rows: users } = await db.query('SELECT * FROM users');
+			const { rows: users } = await db.query('SELECT * FROM gemstone_details');
 			const duration = Date.now() - startTime;
 			return {
 				users: users,
