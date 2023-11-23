@@ -101,7 +101,7 @@ export async function load() {
 	const startTime = Date.now();
 
 	try {
-		const { rows: users } = await db.query('SELECT * FROM users');
+		const { rows: users } = await db.query('SELECT * FROM gemstone_details');
 		const duration = Date.now() - startTime;
 		return {
 			users: users,
